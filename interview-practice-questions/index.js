@@ -1,18 +1,19 @@
 const input = document.querySelector("#input");
-const h1 = document.querySelector("#h1");
-const h2 = document.querySelector("#h2");
-const h3 = document.querySelector("#h3");
+const red = document.querySelector("#red");
+const green = document.querySelector("#green");
+const blue = document.querySelector("#blue");
 const output = document.querySelector("#output");
 
-function alterText(type) {
-  output.innerHTML = `<${type}>${input.value}<${type}/>`;
+function changeTextColor(type) {
+  output.style.color = type;
+  output.innerText = input.value;
 }
-h1.addEventListener("click", () => {
-  alterText("h1");
+red.addEventListener("click", () => {
+  changeTextColor("red");
 });
-h2.addEventListener("click", () => {
-  alterText("h2");
+green.addEventListener("click", () => {
+  changeTextColor("green");
 });
-h3.addEventListener("click", () => {
-  alterText("h3");
+blue.addEventListener("click", () => {
+  changeTextColor("blue");
 });
